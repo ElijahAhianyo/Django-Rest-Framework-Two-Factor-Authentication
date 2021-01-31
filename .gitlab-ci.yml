@@ -17,3 +17,8 @@ stages:
   - test
   - deploy
 
+
+build:
+  stage: build
+  script:
+    - echo "okay dokey"
