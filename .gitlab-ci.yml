@@ -1,0 +1,19 @@
+image:
+  name: docker/compose:1.25.4
+  # name: docker/compose:latest
+  # entrypoint: [""]
+  entrypoint: ["/bin/sh", "-c"]
+
+# services:
+#   - docker:dind
+
+services:
+    - name: docker:dind
+      entrypoint: ["env", "-u", "DOCKER_HOST"]
+      command: ["dockerd-entrypoint.sh"]
+
+stages:
+  - build
+  - test
+  - deploy
+
