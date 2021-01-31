@@ -21,4 +21,4 @@ stages:
 build:
   stage: build
   script:
-    - echo "okay dokey"
+    - echo "okay---- dokey"
